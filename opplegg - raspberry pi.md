@@ -13,6 +13,7 @@
 - [6. Bli kjent med terminalen](#6-bli-kjent-med-terminalen)
 - [7. Raspberry PI kamera](#7-raspberry-pi-kamera)
 - [8. SenseHAT](#8-sensehat)
+- [9. Hvordan kjøre kode automatisk](#9-hvordan-kjøre-kode-automatisk)
 
 Det ligg mange oppgåver og løysingsforslag tilknytta dei ulike seksjonane.
 
@@ -283,3 +284,31 @@ Lag (begynnelsen på) eit enkelt spel som lar brukaren styre ein piksel rundt p�
     - Hint: Ikkje ta alt på ein gong. Få først til å teikne ein enkel piksel (kva gjer sense.set_pixel(2, 2, (0, 0, 255)?). Korleis bruke ei for-løkke til å teikne ei rad? Fortset slik.
     - Løysingsforslag: https://trinket.io/python/197272ac1e (NB: Sjå gjerne på korleis løysinga køyrer først, men ikkje berre kopier koden - då sit du igjen med lite av verdi.)
 3.	Logg data om temperatur, luftfuktighet og trykk i ei eiga CSV-fil kvart sekund. [Løysningsforslag](./sensehat/).
+
+# 9. Hvordan kjøre kode automatisk
+
+Det er mange måter å få koden din til å kjøre automatisk når du starter opp Raspberry PI-en din. Dette kan være nyttig for prosjekter som skal kjøre kontinuerlig, som for eksempel en værstasjon eller et overvåkingskamera.
+
+En enkel måte å gjøre dette på er å bruke `crontab`, som er en tidsplanlegger for Linux. Du kan redigere crontab-filen ved å kjøre `sudo crontab -e` i terminalen, 
+
+## 9.1 Kjør kode ved oppstart
+
+For å få Python-koden din til å kjøre automatisk ved oppstart, legg til en linje som ser slik ut:
+
+```bash
+@reboot python /home/pi/skript.py &
+```
+
+Dette programmet vil da kjøre `skript.py` hver gang Raspberry PI-en starter opp. Pass på at du bruker den riktige banen til skriptet ditt, og at skriptet har de nødvendige tillatelsene for å kjøre.
+
+## 9.2 Kjør kode ved faste tidspunkter
+
+Du kan også få koden din til å kjøre ved faste tidspunkter ved å bruke crontab, for eksempel:
+
+```bash
+0 * * * * python /home/pi/skript.py
+```
+
+Dette vil kjøre `skript.py` hver time, på minutt 0. 
+
+For å forstå hvordan du kan tilpasse linjen med `0 * * * *` til å kjøre koden din på andre tidspunkter, kan du se denne guiden: https://crontab.guru/
