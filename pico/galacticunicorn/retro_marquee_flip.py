@@ -1,9 +1,6 @@
 """
-v2
-
 Retro attract-mode marquee for Pimoroni Galactic Unicorn (53 x 11).
-Beregnet for en Picade Max-kabinett. Denne versjonen lar deg flippe
-visningen opp-ned (180 grader), dersom du må montere panelet opp-ned i kabinettet.
+Beregnet for en Picade Max-kabinett.
 
 Fire modus som bytter automatisk hvert 10. sekund:
   0  Rulletekst   - regnbuegradient med lopelys over og under
@@ -35,8 +32,9 @@ HEIGHT = GalacticUnicorn.HEIGHT  # 11
 FLIP = True
 
 # Egen framebuffer, sa vi kan rotere bildet for det sendes til panelet.
+# Galactic Unicorn bruker RGB888 pakket i en uint32, altsa fire byte per piksel.
 _PIXELS = WIDTH * HEIGHT
-_buf = bytearray(_PIXELS * 2)    # RGB565: to byte per piksel
+_buf = bytearray(_PIXELS * 4)
 graphics = PicoGraphics(display=DISPLAY, buffer=_buf)
 _mv = memoryview(_buf)
 
@@ -46,10 +44,12 @@ def show():
     if FLIP:
         # 180 grader = snu rekkefolgen pa alle pikslene i bufferet
         for i in range(_PIXELS // 2):
-            a = i * 2
-            b = (_PIXELS - 1 - i) * 2
+            a = i * 4
+            b = (_PIXELS - 1 - i) * 4
             _mv[a], _mv[b] = _mv[b], _mv[a]
             _mv[a + 1], _mv[b + 1] = _mv[b + 1], _mv[a + 1]
+            _mv[a + 2], _mv[b + 2] = _mv[b + 2], _mv[a + 2]
+            _mv[a + 3], _mv[b + 3] = _mv[b + 3], _mv[a + 3]
     gu.update(graphics)
 
 # Start lavt. Panelet star rett over hodet ditt i kabinettet.
@@ -205,7 +205,7 @@ def mode_invaders(t):
 
 
 # ---------------------------------------------------------------- modus 2
-WORDS = ("PICADE", "MAX")
+WORDS = ("PICADE", "HAUSNES")
 WORD_SECONDS = 2.6
 
 
