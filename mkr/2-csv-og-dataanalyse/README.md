@@ -121,9 +121,9 @@ Nordnes Sjøbad har ein sensor som måler sjø- og lufttemperatur. Målingane bl
 | `temperatur` | Sjøtemperatur (°C) |
 | `lufttemperatur` | Lufttemperatur (°C) |
 
-### Ting å vere merksam på i dataa (for læraren)
+### Ting å vere merksam på i data
 
-Datasettet er godt eigna til undervisning fordi det har dei vanlegaste problema med ekte måledata:
+Datasettet er godt eigna til å øve seg, fordi det har dei vanlegaste problema med ekte måledata:
 
 - **Manglande verdiar er skrivne som `-`** (663 rader for sjø), og nokre gonger som `NaN`. Les ein fila utan `na_values="-"`, blir temperaturkolonnane tekst. Dette er første «aha» i notatbok 2.
 - **Feilmålingar:** Fire målingar på **−50 °C** (7. juli 2025) og 28 målingar på **nøyaktig 0,0 °C** midt i hetebølgja i juli 2025. Dei trekkjer snittet for juli 2025 ned frå 20,0 °C til 18,3 °C.

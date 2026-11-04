@@ -29,8 +29,6 @@ Når du er ferdig med denne delen, har du ein fungerande temperaturmålar.
 
 Arduino IDE er gratis og finst for både Mac og Windows. Vi brukar **versjon 2** (2.x).
 
-> **Skulemaskin?** Treng du administratorrettar for å installere, må du kanskje bruke skulen sitt programvaresenter (t.d. Firmaportal/Company Portal på Windows eller Self Service på Mac). Spør læraren.
-
 ### Windows
 
 1. Gå til <https://www.arduino.cc/en/software>.
