@@ -13,6 +13,7 @@ Innhald:
 - Kodeeksempel for  [Raspberry PI Pico](opplegg%20-%20raspberry%20pico.md), og tilhøyrande utstyr, som lyslenker og liknande.
 - Kodeeksempel for [Arduino](opplegg%20-%20arduino.md), og tilhøyrande utstyr, som sensorar for ein havbøye, motorar og liknande.
 - Kodeeksempel for [verstasjonen EnviroHAT](./verstasjon/) for Raspberry PI.
+- Opplegg for [temperaturmåling med Arduino MKR NB 1500](./mkr/): oppsett av DS18B20, CSV-filer og tolking av data (Nordnes Sjøbad), og logging av eigne målingar.
 - Meir kjem til...
 
 Det ligg ellers ein del kode for å lære seg programmeringsspråket Python i [denne mappa](./python-kurs/).
