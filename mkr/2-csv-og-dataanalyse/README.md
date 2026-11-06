@@ -59,9 +59,39 @@ Har du Python frå før, kan du sjekke versjonen i ein terminal: `python --versi
 
 ### Steg 4: Hent filene og opne mappa
 
-1. Last ned filene frå GitHub: Gå til forsida av repositoryet, trykk den grøne knappen **Code** → **Download ZIP**, og pakk ut ZIP-fila. (Kan du Git, kan du heller klone repositoryet.)
-2. I VS Code: **File → Open Folder…** og vel mappa `mkr/2-csv-og-dataanalyse`.
-3. Trykk **Yes, I trust the authors** om VS Code spør.
+Vel eitt av alternativa under.
+
+**Alternativ A: Last ned fil for fil (enklast)**
+
+1. Lag ei ny mappe på maskina, t.d. `csv-kurs`. Inni ho lagar du ei mappe som heiter `data`.
+2. Opne kvar av lenkjene under og trykk på nedlastingsknappen (**Download raw file**, ei pil ned øvst til høgre over fila):
+   - [`01-csv-og-tidskodar.ipynb`](https://github.com/hausnes/raspberry-mm/blob/main/mkr/2-csv-og-dataanalyse/01-csv-og-tidskodar.ipynb) → legg ho i `csv-kurs`
+   - [`02-tolke-data.ipynb`](https://github.com/hausnes/raspberry-mm/blob/main/mkr/2-csv-og-dataanalyse/02-tolke-data.ipynb) → legg ho i `csv-kurs`
+   - [`requirements.txt`](https://github.com/hausnes/raspberry-mm/blob/main/mkr/2-csv-og-dataanalyse/requirements.txt) → legg ho i `csv-kurs`
+   - [`nordnes-sjobad.csv`](https://github.com/hausnes/raspberry-mm/blob/main/mkr/2-csv-og-dataanalyse/data/nordnes-sjobad.csv) → legg ho i `csv-kurs/data`
+3. Sjekk at filnamna ikkje har fått ei ekstra ending, t.d. `.txt` eller `.json`. På Mac kan du slå på *Finder → Innstillingar → Avansert → Vis alle filnamnutvidingar* for å sjå endingane.
+
+Mappa skal sjå slik ut:
+
+```text
+csv-kurs/
+├── 01-csv-og-tidskodar.ipynb
+├── 02-tolke-data.ipynb
+├── requirements.txt
+└── data/
+    └── nordnes-sjobad.csv
+```
+
+> Datafila **må** liggje i undermappa `data`. Elles finn ikkje notatbøkene ho, og du får feilen `FileNotFoundError`.
+
+**Alternativ B: Last ned alt som ZIP**
+
+Gå til [forsida av repositoryet](https://github.com/hausnes/raspberry-mm), trykk den grøne knappen **Code** → **Download ZIP** og pakk ut ZIP-fila. Mappa du skal bruke, ligg i `mkr/2-csv-og-dataanalyse`. (Kan du Git, kan du heller klone repositoryet.)
+
+**Opne mappa i VS Code**
+
+1. I VS Code: **File → Open Folder…** og vel mappa (`csv-kurs` om du brukte alternativ A, eller `mkr/2-csv-og-dataanalyse` om du brukte alternativ B).
+2. Trykk **Yes, I trust the authors** om VS Code spør.
 
 > Opne alltid **mappa**, ikkje berre enkeltfila. Då finn notatboka datafila i `data/`.
 
