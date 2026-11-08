@@ -4,3 +4,4 @@ desktop.ini
 **pycache**
 settings.json
 .DS_Store
+secrets.py
