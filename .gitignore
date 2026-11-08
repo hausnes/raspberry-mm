@@ -3,3 +3,4 @@ desktop.ini
 .vscode/desktop.ini
 **pycache**
 settings.json
+.DS_Store
