@@ -103,8 +103,15 @@ Vi lagar eit eige *virtuelt miljø* (`.venv`) for prosjektet. Det er ei mappe me
 2. Trykk **Select Kernel** øvst til høgre i notatboka.
 3. Vel **Python Environments…** → **+ Create Python Environment** → **Venv**.
 4. Vel Python-versjonen du installerte i steg 1.
-5. Når VS Code spør om avhengigheiter (*dependencies*), kryss av for **requirements.txt** og trykk **OK**.
-6. Vent til installasjonen er ferdig (sjå nede til høgre). Det kan ta eit par minutt.
+5. VS Code spør så korleis du vil installere pakkar. Vel **Search for additional packages on PyPI** (søk etter pakkar på PyPI).
+6. Søk opp og vel desse fire biblioteka, eitt om gongen:
+   - `pandas`
+   - `matplotlib`
+   - `ipykernel`
+   - `pyserial`
+7. Vent til installasjonen er ferdig (sjå nede til høgre). Det kan ta eit par minutt.
+
+> I nokre versjonar av VS Code får du i staden spørsmål om å installere frå **requirements.txt**. Då kan du berre krysse av for den fila og trykkje **OK**. Ho inneheld dei same fire biblioteka.
 
 Køyr første kodecelle med `Shift + Enter`. Fungerer det, er du klar!
 
