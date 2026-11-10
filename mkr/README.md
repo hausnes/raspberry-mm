@@ -6,7 +6,7 @@ Eit opplegg i tre delar for **Teknologi og forskingslære 1**. Elevane set opp e
 |---|---|---|
 | [**Del 1: Set opp Arduino og mål temperatur**](1-oppsett-og-maling/) | Installere Arduino IDE (Mac og Windows), board-pakke og bibliotek. Kople DS18B20 med pull-up-motstand på breadboard. Lese av temperaturen. | Arduino MKR NB 1500, DS18B20 (vasstett probe), 4,7 kΩ motstand, breadboard. Arduino IDE 2. |
 | [**Del 2: CSV-filer og tolking av data**](2-csv-og-dataanalyse/) | Kva er CSV, tidskodar (ISO 8601), skrive og lese CSV. Analyse av over to år med badetemperaturar frå Nordnes Sjøbad: frå enkle oppslag til rydding, døgnvariasjon og korrelasjon. 15 oppgåver med løysingsforslag. | VS Code, Python, Pandas, Matplotlib (Jupyter-notatbøker) |
-| [**Del 3: Logg eigne målingar til CSV**](3-logging-til-csv/) | Spor A: Arduinoen sender målingar over USB, og eit Python-skript lagrar dei i CSV med tidspunkt. Spor B: Arduinoen lagrar sjølv på SD-kort (MKR MEM Shield). Analyse av eigne data og forslag til forsøk. | Som del 1 og 2, + pyserial. Spor B: MKR MEM Shield og microSD-kort. |
+| [**Del 3: Logg eigne målingar til CSV**](3-logging-til-csv/) | Arduinoen lagrar målingane sjølv på SD-kort (MKR MEM Shield). Analyse av eigne data og forslag til forsøk. Bonus: send målingar over USB til eit Python-skript som lagrar dei i CSV. | Som del 1 og 2, + MKR MEM Shield og microSD-kort. Bonus: pyserial. |
 
 Del 1 kan brukast åleine. Del 2 kan òg brukast åleine (utan Arduino).
 
